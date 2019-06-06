@@ -1,4 +1,4 @@
-package com.quickheaven.ocjp.exceptions;
+package ca.quickheaven.ocjp.exceptions;
 
 public class TurkeyCage implements AutoCloseable {
 

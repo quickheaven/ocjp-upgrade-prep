@@ -1,4 +1,4 @@
-package com.quickheaven.ocjp.exceptions;
+package ca.quickheaven.ocjp.exceptions;
 
 /**
  * Resources are closed in the reverse order from which they were created.
