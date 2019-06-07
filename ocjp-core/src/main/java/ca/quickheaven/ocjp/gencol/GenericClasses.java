@@ -1,5 +1,11 @@
 package ca.quickheaven.ocjp.gencol;
 
+import ca.quickheaven.ocjp.gencol.vo.Crate;
+import ca.quickheaven.ocjp.gencol.vo.Elephant;
+import ca.quickheaven.ocjp.gencol.vo.Robot;
+import ca.quickheaven.ocjp.gencol.vo.SizeLimitedCrate;
+import ca.quickheaven.ocjp.gencol.vo.Zebra;
+
 public class GenericClasses {
 
 	public static void main(String[] args) {
