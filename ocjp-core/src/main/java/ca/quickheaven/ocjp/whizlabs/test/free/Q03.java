@@ -23,4 +23,9 @@ public class Q03 implements AutoCloseable {
 		}
 	}
 
+	// Exception in thread "main" Closing app 1
+	// java.lang.RuntimeException
+	// at ca.quickheaven.ocjp.whizlabs.test.free.Q03.<init>(Q03.java:12)
+	// at ca.quickheaven.ocjp.whizlabs.test.free.Q03.main(Q03.java:21)
+
 }
