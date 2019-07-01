@@ -1,4 +1,4 @@
-package ca.quickheaven.ocjp.func.prog;
+package ca.quickheaven.ocjp.func.prog.ch02;
 
 public interface CheckTrait {
 
