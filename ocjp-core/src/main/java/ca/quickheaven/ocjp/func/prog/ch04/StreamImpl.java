@@ -15,6 +15,8 @@ public class StreamImpl {
 
         usingCommonTerminalOperations();
 
+        usingCommonIntermediateOperations();
+
     }
 
     private static void creatingStreamSources() {
@@ -147,6 +149,60 @@ public class StreamImpl {
         stream = Stream.of("w", "o", "l", "f");
         Set<String> set3 = stream.collect(Collectors.toSet());
         System.out.println(set3); // [f, w, l, o]
+
+    }
+
+    private static void usingCommonIntermediateOperations() {
+        // filter()
+        // The filter() method returns a Stream with elements that match a given expression.
+        Stream<String> s1 = Stream.of("monkey", "gorilla", "bonobo");
+        s1.filter(x -> x.startsWith("m")).forEach(System.out::print);
+
+        // distinct()
+        // The distinct() method returns a stream with duplicate values removed. The duplicates do not need to be adjacent
+        // to be removed.
+        Stream<String> s2 = Stream.of("duck", "duck", "duck", "goose");
+        s2.distinct().forEach(System.out::print);
+
+        // limit() and skip()
+        // The limit() and skip() method makes a Stream smaller. They make finite stream smaller, or they could make a
+        // finite stream out of an infinite stream.
+        Stream<Integer> s3 = Stream.iterate(1, n -> n + 1);
+        s3.skip(5).limit(2).forEach(System.out::print); // 67
+
+        // map()
+        // The map() method creates a one-to-one mapping from the elements in the stream to the elements of the next step in the stream.
+        Stream<String> s4 = Stream.of("monkey", "gorilla", "bonobo");
+        s4.map(String::length).forEach(System.out::print); // 676
+
+        // flatMap()
+        // The flatMap() method take each element in the stream and makes any elements it contains top-level elements in a single stream.
+        List<String> zero = Arrays.asList();
+        List<String> one = Arrays.asList("Bonobo");
+        List<String> two = Arrays.asList("Mama, Gorilla", "Baby Gorilla");
+        Stream<List<String>> animals = Stream.of(zero, one, two);
+
+        animals.flatMap(l -> l.stream()).forEach(System.out::println);
+        // Bonobo
+        // Mama Gorilla
+        // Baby Gorilla
+
+        // sorted()
+        // The sorted() method returns a stream with the elements sorted. Just like sorting arrays, Java uses natural
+        // ordering unless we specify the comparator.
+        Stream<String> s5 = Stream.of("brown-", "bear-");
+        s5.sorted().forEach(System.out::print); // bear-brown-
+
+        // Remember that we can pass a lambda expression as the comparator.
+        Stream<String> s6 = Stream.of("brown bear-", "grizzly-");
+        s6.sorted(Comparator.reverseOrder()).forEach(System.out::print); // grizzly-brown bear-
+
+        // peak()
+        // The peak() method is our final intermediate operation. It is useful for debugging because it allows us to
+        // perform a stream operation without actually changing the stream.
+        Stream<String> s7 = Stream.of("black bear", "brown bear", "grizzly");
+        long count = s7.filter(s -> s.startsWith("g")).peek(System.out::println).count(); // grizzly
+        System.out.println(count); // 1
 
     }
 }
