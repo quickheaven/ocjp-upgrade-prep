@@ -1,4 +1,4 @@
-package ca.quickheaven.ocjp.whizlabs.test.free;
+package ca.quickheaven.ocjp.whiz.test.free;
 
 public interface Q22<E> {
 

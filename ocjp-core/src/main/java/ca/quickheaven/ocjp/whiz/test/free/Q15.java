@@ -1,4 +1,4 @@
-package ca.quickheaven.ocjp.whizlabs.test.free;
+package ca.quickheaven.ocjp.whiz.test.free;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

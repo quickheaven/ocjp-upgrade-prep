@@ -1,4 +1,4 @@
-package ca.quickheaven.ocjp.whizlabs.test.free;
+package ca.quickheaven.ocjp.whiz.test.free;
 
 import java.util.Arrays;
 
