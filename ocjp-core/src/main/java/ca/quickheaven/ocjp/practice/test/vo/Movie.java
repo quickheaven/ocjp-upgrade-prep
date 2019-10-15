@@ -5,6 +5,8 @@ public class Movie {
     private String title;
     private double rating;
 
+    private String label;
+
     @Override
     public String toString() {
         return this.title;
@@ -13,6 +15,11 @@ public class Movie {
     public Movie(String title, double rating) {
         this.title = title;
         this.rating = rating;
+    }
+
+    public Movie(String title, String label) {
+        this.title = title;
+        this.label = label;
     }
 
     public String getTitle() {
@@ -31,4 +38,15 @@ public class Movie {
         this.rating = rating;
     }
 
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public String toString(String timing) {
+        return title + ": " + label + "(" + timing + ")";
+    }
 }
