@@ -8,6 +8,7 @@ public class Question4 {
     public static void main(String[] args) {
 
         // What happens when the given fragment is compiled and run?
+        // >> It prints out a list of characters but the letter case is uncertain.
         CopyOnWriteArrayList<String> data = new CopyOnWriteArrayList<>(Arrays.asList("a", "B", "c", "D"));
 
         new Thread() {

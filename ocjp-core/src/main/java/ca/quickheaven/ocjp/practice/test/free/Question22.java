@@ -1,6 +1,8 @@
 package ca.quickheaven.ocjp.practice.test.free;
 
-public interface Q22<E> {
+public interface Question22<E> {
+
+	// What is a valid functional interface declaration?
 
 	E getSometing();
 

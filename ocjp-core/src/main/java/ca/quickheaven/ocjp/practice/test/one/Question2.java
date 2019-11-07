@@ -5,6 +5,9 @@ import java.util.concurrent.CyclicBarrier;
 
 public class Question2 { // MyApp
 
+    // What happens when te MyApp class is compiled and run?
+    // >> It prints out the following (order of both lines does not matter): Thread 1 is running Thread 2  is running
+
     public static void main(String[] args) throws InterruptedException {
 
         CyclicBarrier cyclicBarrier = new CyclicBarrier(3, new Runnable() {
