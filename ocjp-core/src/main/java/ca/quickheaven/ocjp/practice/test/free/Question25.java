@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 
-public class Q25 {
+public class Question25 {
 
 	public static void main(String[] args) {
 		LocalDate date1 = LocalDate.of(2016, Month.JANUARY, 1);

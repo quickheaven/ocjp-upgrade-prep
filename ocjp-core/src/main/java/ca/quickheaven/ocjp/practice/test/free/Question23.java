@@ -2,7 +2,7 @@ package ca.quickheaven.ocjp.practice.test.free;
 
 import java.util.function.BiFunction;
 
-public class Q23 {
+public class Question23 {
 
 	public static void main(String[] args) {
 		int number1 = 3;
