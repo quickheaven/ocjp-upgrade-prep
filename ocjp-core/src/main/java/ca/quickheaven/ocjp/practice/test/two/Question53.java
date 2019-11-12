@@ -14,16 +14,16 @@ public class Question53 {
         for (String name : greetings) {
             switch (name) {
                 case "Welcome":
-                    System.out.print("Welcome");
+                    System.out.print("Welcome ");
                     break;
                 case "to":
-                    System.out.print("to");
+                    System.out.print("to ");
                     break;
                 case "the":
-                    System.out.print("the");
+                    System.out.print("the ");
                     break;
                 case "World":
-                    System.out.print("World");
+                    System.out.print("World ");
                     break;
             }
         }
