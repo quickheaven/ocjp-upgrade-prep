@@ -10,4 +10,8 @@ public class FileUtils {
 
         return String.format("%s/src/main/resources/%s", currentDir.toAbsolutePath(), fileName);
     }
+
+    public static void main(String[] args) {
+
+    }
 }
